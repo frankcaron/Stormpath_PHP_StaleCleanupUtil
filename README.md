@@ -1,5 +1,4 @@
-Stormpath
-Stale Clean-up Utility
+Stormpath Stale Clean-up Utility
 =================
 
 This is a simple PHP utility which will return a report of stale
