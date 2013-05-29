@@ -22,12 +22,13 @@ require_once 'Stormpath_Credentials.php';
 
 //Connection vars
 $appHref = "https://" . urlencode($appID) . ":" . urlencode($appSecret) . "@api.stormpath.com/v1/applications/" . $appUID;
+//$appHref = "https://" . urlencode($appID) . ":" . urlencode($appSecret) . "@api.stormpath.com/v1/";
 
 //Connect
 try{  
 	
 	//Mission go
-	echo "Alright, let's do this, Apollo.<br /><br />";
+	echo "Alright, let's do this, Apollo.<br /><br />Connecting to " . $appHref . "...<br /><br />";
 
 	$builder = new Services_Stormpath_Client_ClientApplicationBuilder;
 	$clientApplication = $builder->setApplicationHref($appHref)->build();
@@ -37,10 +38,13 @@ try{
 	
 	echo "Apollo, we have no problem.<br /><br />";
 	
-} catch (Exception $e) {
-	//Log error
-	echo "Apollo, we had a problem:<br /><br /> " . $e;
+} catch (Services_Stormpath_Resource_ResourceError $re)
+{
+    echo 'Message: ' . $re->getMessage();
+    echo 'HTTP Status: ' . strval($re->getStatus()); 
+    echo 'Developer Message: ' . $re->getDeveloperMessage();
+    echo 'More Information: ' . $re->getMoreInfo();
+    echo 'Error Code: ' . strval($re->getErrorCode());
 }
-
 
 ?>
