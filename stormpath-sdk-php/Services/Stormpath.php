@@ -53,9 +53,14 @@ class Services_Stormpath
 
     public static function createClient($accessId, $secretKey, $baseUrl = null)
     {
-        $apiKey = new Services_Stormpath_Client_ApiKey($accessId, $secretKey);
+        try {
+    		$apiKey = new Services_Stormpath_Client_ApiKey($accessId, $secretKey);
+    		return new Services_Stormpath_Client_Client($apiKey, $baseUrl);
+        } catch (Exception $e) {
+        	echo "There was an error creating your client: " . $e;
+        }
 
-        return new Services_Stormpath_Client_Client($apiKey, $baseUrl);
+        
     }
 
 }

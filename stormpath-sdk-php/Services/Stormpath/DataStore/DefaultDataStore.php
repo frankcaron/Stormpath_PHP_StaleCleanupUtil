@@ -30,7 +30,8 @@ class Services_Stormpath_DataStore_DefaultDataStore
     public function __construct(Services_Stormpath_Http_RequestExecutor $requestExecutor,
                                 $baseUrl = null)
     {
-        $this->requestExecutor = $requestExecutor;
+    	
+    	$this->requestExecutor = $requestExecutor;
         $this->resourceFactory = new Services_Stormpath_DataStore_DefaultResourceFactory($this);
 
         if(!$baseUrl)

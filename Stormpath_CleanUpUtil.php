@@ -11,6 +11,34 @@
  * http://www.frankcaron.com
  */
 
-echo "Alright, let's do this."
+//Maximum traceability
+error_reporting(-1);
+
+//Import Stormpath lib
+//require 'stormpath-sdk-php/Services/Stormpath.php';
+include('httpful.phar');
+
+//Connection vars
+
+$appHref = "https://" . urlencode($appID) . ":" . urlencode($appSecret) . "@api.stormpath.com/v1/applications/" . $appUID;
+
+//Mission go
+echo "Alright, let's do this, monkey.<br /><br />";
+
+//Connect
+try{  
+	$uri = $appHref . "/accounts";
+	
+	echo "Gimme " . $uri;
+	x
+	$response = Request::get($uri)->send();
+	
+	echo "yup";
+	
+} catch (Exception $e) {
+	//Log error
+	echo "Error encountered: " . $e;
+}
+
 
 ?>

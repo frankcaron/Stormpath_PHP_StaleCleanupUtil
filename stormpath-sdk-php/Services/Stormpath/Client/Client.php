@@ -60,8 +60,13 @@ class Services_Stormpath_Client_Client
      */
     public function __construct(Services_Stormpath_Client_ApiKey $apiKey, $baseUrl = null)
     {
-        $requestExecutor = new Services_Stormpath_Http_HttpClientRequestExecutor($apiKey);
-        $this->dataStore = new Services_Stormpath_DataStore_DefaultDataStore($requestExecutor, $baseUrl);
+        try {
+
+    		$requestExecutor = new Services_Stormpath_Http_HttpClientRequestExecutor($apiKey);
+        	$this->dataStore = new Services_Stormpath_DataStore_DefaultDataStore($requestExecutor, $baseUrl);
+        } catch (Exception $e) {
+        	echo "<p>An error occured when constructing: " . $e . "</p>";
+        }
     }
 
     public function getCurrentTenant()

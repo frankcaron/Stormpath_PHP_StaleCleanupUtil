@@ -26,7 +26,8 @@ class Services_Stormpath_Http_HttpClientRequestExecutor
 
     public function __construct(Services_Stormpath_Client_ApiKey $apiKey = null)
     {
-        $this->httpClient = new HTTP_Request2;
+    	
+    	$this->httpClient = new HTTP_Request2;
 
         if ($apiKey)
         {
