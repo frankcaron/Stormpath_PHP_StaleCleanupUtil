@@ -9,5 +9,21 @@ a cloud-based, federated user store enabled by Stormpath's solution.
 
 Graciously borrows the prettify CSS from http://meyerweb.com/eric/tools/css/reset/  
 
+Prereqs
+--------------
+In order to make this script work for you, you'll need to add a php file to the root called 
+"Stormpath_credentials" with the following contents:
+
+    <?php
+    //Credentials for the Stormpath app
+    //Do not include in git
+    $appID = "your_api_id";
+    $appSecret = "your_api_secret";
+    $appUID = 'your_app_id';
+    ?>
+
+Contributions
+================
+
 2013, Frank Caron  
 http://www.frankcaron.com
