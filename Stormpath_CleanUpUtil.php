@@ -80,7 +80,7 @@ function printPageHeader() {
 	echo "<form method='post' action='Stormpath_CleanUpUtil.php'>";
 	echo "<h1>Simple Stormpath Disabled User Activator Utility</h1>";
 	echo "<h3>Written with love by <a href='http://www.frankcaron.com' target='blank'>Frank Caron</a></h3>";
-	echo "<p><em>This simple utility will print out a table of all the users that are disabled and enable them all.</em></p>";
+	echo "<p><em>This simple utility will print out a table of all the users across directories and give you the ability to toggle the states on each or all by selecting them and hitting submit.</em></p>";
 	echo "<br /><hr /><br />";
 }
 //Page Footer
