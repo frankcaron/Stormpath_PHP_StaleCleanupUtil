@@ -77,7 +77,7 @@ function handlePostback() {
 function printPageHeader() {
 	echo "<html><head><link rel='stylesheet' type='text/css' href='Stormpath_CleanUpCSS.css'></head><body>";
 	echo "<div style='padding: 20px;'>";
-	echo "<form method='post' action='Stormpath_CleanUpUtil.php'>";
+	echo "<form method='post' action='Stormpath_UserStatusToggler.php'>";
 	echo "<h1>Simple Stormpath Disabled User Activator Utility</h1>";
 	echo "<h3>Written with love by <a href='http://www.frankcaron.com' target='blank'>Frank Caron</a></h3>";
 	echo "<p><em>This simple utility will print out a table of all the users across directories and give you the ability to toggle the states on each or all by selecting them and hitting submit.</em></p>";
