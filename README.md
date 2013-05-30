@@ -1,4 +1,4 @@
-Stormpath Disabled User Clean-up Utility
+Stormpath Account State Toggler Utility
 =================
 
 This is a simple PHP utility which will return a report of users across a tenant's directories
