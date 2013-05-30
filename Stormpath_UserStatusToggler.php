@@ -109,12 +109,12 @@ try{
 	//Post back handler
 	handlePostback();
 	
+	//Table Struct
+	printTableStruct();
+	
 	//Connect 
 	$builder = new Services_Stormpath_Client_ClientApplicationBuilder;
 	$app_directories = retrieveDirectories($builder->setApplicationHref($appHref)->build()->getClient());
-	
-	//Table Struct
-	printTableStruct();
 	
 	//Find Users
 	foreach ($app_directories as $directory) {
@@ -139,7 +139,7 @@ try{
 } catch (Services_Stormpath_Resource_ResourceError $re)
 {
     //Error Handling
-	echo 'Message: ' . $re->getMessage();
+    echo 'Message: ' . $re->getMessage();
     echo 'HTTP Status: ' . strval($re->getStatus()); 
     echo 'Developer Message: ' . $re->getDeveloperMessage();
     echo 'More Information: ' . $re->getMoreInfo();
