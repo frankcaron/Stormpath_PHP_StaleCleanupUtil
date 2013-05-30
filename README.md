@@ -21,6 +21,11 @@ In order to make this script work for you, you'll need to add a php file to the 
       $appSecret = "your_api_secret";
       $appUID = 'your_app_id';
     ?>
+    
+Known Deficiencies
+--------------
+- I really should make a "Select All" checkbox. 
+- Pagination when results are greater than X is not handled.
 
 Contributions
 ================
