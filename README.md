@@ -1,13 +1,13 @@
-Stormpath Stale Clean-up Utility
+Stormpath Disabled User Clean-up Utility
 =================
 
-This is a simple PHP utility which will return a report of stale
-users in a specified Stormpath application. The report details
-all the users who have not logged in to a particular application, across
-directories, in the last 30 days.
+This is a simple PHP utility which will return a report of disabled
+users in a specified Stormpath application and provide a control to bulk enable them. 
 
-It is an example of using the Stormpath REST APIs for managing 
-your cloud federated user auth store. 
+This is an example of using the Stormpath PHP SDK for the purposes of manipulating
+a cloud-based, federated user store enabled by Stormpath's solution.
 
-2013, Frank Caron
+Graciously borrows the prettify CSS from http://meyerweb.com/eric/tools/css/reset/  
+
+2013, Frank Caron  
 http://www.frankcaron.com
